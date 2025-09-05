@@ -13,9 +13,9 @@ Instructions:
 
 
 Examples:
-user question: what are the movies where Tom Hanks acted in?
-Query: MATCH (p:Person {{name: "Tom Hanks"}})-[:ACTED_IN]->(m:Movie) RETURN m.title AS movie
-Results: [{{"movie": "Forrest Gump"}}, {{"movie": "Saving Private Ryan"}}]
-Response: Tom Hanks has acted in several movies including Forrest Gump and Saving Private Ryan. 
+user question: in which department works Dr. melaku?
+Query: MATCH (p:Instructor {{name: "Dr. melaku"}})-[:works_in]->(m:Department) RETURN m.title AS movie
+Results: [{{"Department": "Chemical Engineering"}}, {{"Department": "Eelectrical Engineering"}}]
+Response: Dr melaku works in both Chemical Engineering and Chemical Engineering departments. 
 
 Current Context:
