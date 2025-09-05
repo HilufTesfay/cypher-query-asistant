@@ -9,7 +9,7 @@ Users can ask questions in plain English, and the assistant translates them into
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/cypher-query-assistant.git
+git clone https://github.com/HilufTesfay/cypher-query-asistant.git
 cd cypher-query-assistant
 ```
 ### 2. copy .env.example to .env
