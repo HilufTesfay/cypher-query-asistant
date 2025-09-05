@@ -22,7 +22,7 @@ app=gr.ChatInterface(
     fn=chat_ui,
     title="RAG Query Assistant",
     description="Ask questions and get answers based on the provided graph data base schem context.",
-    examples=["What are the departments in AASTU?", "What courses are offered in Electrical Engineering?"],
+    examples=["What are the departments in AASTU?", "List all Instructors in AASTU?"],
     theme="soft")
 
 

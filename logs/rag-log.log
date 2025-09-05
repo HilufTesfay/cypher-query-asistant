@@ -304,3 +304,372 @@
 2025-09-05 09:21:04,307 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
 2025-09-05 09:21:04,333 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
 2025-09-05 09:21:05,679 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:27:01,387 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:27:01,583 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:27:01,654 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:27:02,742 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:27:20,052 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 09:27:20,052 - __main__ - INFO - Response: AASTU has at least three departments: Electrical Engineering, Mechanical Engineering, and Chemical Engineering.  This list may not be exhaustive; there could be other departments not included in the database.
+2025-09-05 09:27:33,080 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: OFFERS)} {position: line: 1, column: 58, offset: 57} for query: 'MATCH (d:Department {name: "Electrical Engineering"})-[r:OFFERS]->(c:Course) RETURN c.name'
+2025-09-05 09:27:34,806 - __main__ - INFO - User Question: What courses are offered in Electrical Engineering?
+2025-09-05 09:27:34,807 - __main__ - INFO - Response: It seems there are no courses currently listed in our database under the Electrical Engineering department.  There are a few reasons why this might be:
+
+* **No data entered yet:** The database may not yet contain information on Electrical Engineering courses.  This is common for new databases or those that are still being populated.
+* **Incorrect category:**  Perhaps the courses are categorized under a different department name (e.g., "Electrical and Computer Engineering").  Double-checking the department name used in the database would be helpful.
+* **Data entry error:** There might be a mistake in how the course information was entered into the database.
+
+
+To find the courses, we might need to refine our search or check for alternative department names.
+2025-09-05 09:28:41,113 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:28:41,303 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:28:41,346 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:28:42,396 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:28:59,085 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: OFFERS)} {position: line: 1, column: 58, offset: 57} for query: 'MATCH (d:Department {name: "Electrical Engineering"})-[r:OFFERS]->(c:Course) RETURN c.name'
+2025-09-05 09:29:04,618 - __main__ - INFO - User Question: What courses are offered by Electrical Engineering?
+2025-09-05 09:29:04,618 - __main__ - INFO - Response: There are no courses currently listed as being offered by the Electrical Engineering department in our database.  This could be due to a few reasons:
+
+* **Data is missing:** The database may not yet be fully populated with course information for Electrical Engineering.
+* **Incorrect department name:**  Perhaps the department name is slightly different in the database (e.g., a shortened version or an abbreviation).  Could you double-check the exact name used?
+* **No courses offered currently:** It's possible that Electrical Engineering doesn't currently have any courses scheduled.  This might be due to time of year or other scheduling factors.
+
+
+To help me find the information, please provide the full and exact name of the Electrical Engineering department as it appears in the database, if known.
+2025-09-05 09:29:42,386 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:29:42,562 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:29:42,609 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:29:44,352 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:30:05,342 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: OFFERS)} {position: line: 1, column: 58, offset: 57} for query: 'MATCH (d:Department {name: "Electrical Engineering"})-[r:OFFERS]->(c:Course) RETURN c.name'
+2025-09-05 09:30:08,022 - __main__ - INFO - User Question: What courses are offered by Electrical Engineering Department?
+2025-09-05 09:30:08,022 - __main__ - INFO - Response: It seems there are no courses currently listed as being offered by the Electrical Engineering Department in our database.  This could be due to a few reasons:
+
+* **Missing data:** The database may not yet be fully populated with course information.
+* **Incorrect department name:**  There might be a slight variation in how the department is named in the database (e.g., "Electrical & Computer Engineering").  Double-checking the exact department name would be helpful.
+* **Data entry error:** There might be an error in how the courses are linked to the department.
+
+
+To help me find the information you need, could you please clarify the exact name of the department as it appears in official university records?  Also, are there any specific course names or keywords you could provide that might help narrow the search?
+2025-09-05 09:31:06,583 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:31:06,818 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:31:06,888 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:31:07,995 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:31:23,359 - __main__ - INFO - User Question: List all Instructors in AASTU?
+2025-09-05 09:31:23,359 - __main__ - INFO - Response: AASTU has many instructors!  Here are some of them:
+
+* Dr. Sultan (ID: E-01)
+* Dr. Amanuel (ID: E-02)
+* Dr. Negasi (ID: E-03)
+* Dr. Meresa (ID: CH-01)
+* Dr. Melaku (ID: CH-02)
+* Dr. Bruk (ID: CH-03)
+* Dr. Fana (ID: M-01)
+* Dr. Melaku (ID: M-02)
+* Dr. Bruk (ID: M-03)
+
+Note that the IDs (like "E-01", "CH-01", etc.) likely represent departments or divisions within AASTU.  This list may not be exhaustive; there could be more instructors not included in this result.
+2025-09-05 09:33:31,533 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:33:31,713 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:33:31,753 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:33:33,509 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:33:50,780 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 09:33:50,781 - __main__ - INFO - Response: AASTU has several departments, including:
+
+* Electrical Engineering
+* Mechanical Engineering
+* Chemical Engineering
+2025-09-05 09:34:09,455 - __main__ - INFO - User Question: List all Instructors in AASTU?
+2025-09-05 09:34:09,456 - __main__ - INFO - Response: AASTU has the following instructors:
+
+* Dr. Sultan (ID: E-01)
+* Dr. Amanuel (ID: E-02)
+* Dr. Negasi (ID: E-03)
+* Dr. Meresa (ID: CH-01)
+* Dr. Melaku (ID: CH-02)
+* Dr. Bruk (ID: CH-03)
+* Dr. Fana (ID: M-01)
+* Dr. Melaku (ID: M-02)
+* Dr. Bruk (ID: M-03)
+
+Note that some instructors seem to have multiple IDs, possibly indicating different roles or departments.  The IDs might represent different departments or roles within the university.
+2025-09-05 09:34:43,111 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: BELONGS_TO)} {position: line: 1, column: 48, offset: 47} for query: 'MATCH (i:Instructor)-[:TEACHES]->(c:Course)<-[:BELONGS_TO]-(d:Department {name:"Electrical Engineering"}) RETURN i'
+2025-09-05 09:34:46,780 - __main__ - INFO - User Question: list all instructors belong to Electrical Engineering?
+2025-09-05 09:34:46,780 - __main__ - INFO - Response: There are no instructors listed in the database as belonging to the Electrical Engineering department.  This could be due to a few reasons:
+
+* **No data exists:**  The database may simply not yet contain information on Electrical Engineering instructors.
+* **Incorrect department name:**  The query might be using an incorrect name for the Electrical Engineering department (e.g., a misspelling or abbreviation).  Please double-check the department's name as it's recorded in the database.
+* **Data entry error:**  The instructors might exist in the database, but the department they belong to might not be correctly linked to them.
+
+
+To help me find the information, could you please confirm the exact name used for the Electrical Engineering department in the database?
+2025-09-05 09:35:48,787 - __main__ - INFO - User Question: list all courese  Electrical Engineering 
+2025-09-05 09:35:48,787 - __main__ - INFO - Response: I couldn't find any courses listed under "Electrical Engineering" in the database.  There are a few reasons why this might be:
+
+* **No data exists:**  There may simply be no courses of that type currently in the system.
+* **Incorrect labeling:** The courses might exist, but they may not be tagged or categorized under "Electrical Engineering".  Perhaps they use a slightly different label (e.g., "Electrical & Computer Engineering").
+* **Data entry error:** There might be an error in how the course data was entered into the database.
+
+To help me find the information you need, could you please clarify the search terms or provide any additional details, such as a specific university or college?
+2025-09-05 09:38:20,338 - __main__ - INFO - User Question: list all courses?
+2025-09-05 09:38:20,338 - __main__ - INFO - Response: Here's a list of all the courses available:
+
+* **EL-03:** Circuit
+* **ME-01:** Mechanics
+* **ME-21:** Thermodynamics
+* **ME-03:** Kinematics
+* **CHE-01:** Plant Design
+* **CHE-21:** Chemical Reaction
+* **CHE-03:** Fluid Dynamics
+* **EL-01:** Electronics
+* **EL-21:** Signal Processing
+
+The course codes (like "EL-03") are just short identifiers.
+2025-09-05 09:45:52,757 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Teacher)} {position: line: 1, column: 33, offset: 32} for query: 'MATCH (c:Course)-[:TEACHES]->(t:Teacher {name: "Dr. bruk"}) RETURN c'
+2025-09-05 09:45:58,077 - __main__ - INFO - User Question: what course teachs Dr. bruk?
+2025-09-05 09:45:58,077 - __main__ - INFO - Response: It seems there are no courses listed in the database as being taught by Dr. Bruk.  There are several reasons why this might be the case:
+
+* **Dr. Bruk's data is missing:**  The database may not yet contain information about the courses Dr. Bruk teaches.
+* **Incorrect spelling or name variation:**  The query may have used an incorrect spelling of Dr. Bruk's name, or a different variation of their name than what's stored in the database (e.g., initials instead of full name).
+* **Data entry error:**  There could be an error in how the course-instructor relationships are stored in the database.
+* **No courses assigned yet:** It's possible Dr. Bruk hasn't been assigned to any courses yet.
+
+To help me find the correct information, could you please double-check the spelling of Dr. Bruk's name and provide any additional details, such as the department they work in or the university they teach at?
+2025-09-05 09:46:26,545 - __main__ - INFO - User Question: what course teachs instructor Dr. bruk?
+2025-09-05 09:46:26,545 - __main__ - INFO - Response: Dr. Bruk teaches the following courses:
+
+* Fluid Dynamics (CHE-03)
+* Chemical Reaction (CHE-21)
+* Plant Design (CHE-01)
+* Mechanics (ME-01)
+* Thermodynamics (ME-21)
+* Kinematics (ME-03)
+
+
+The course codes (like CHE-03 and ME-01) are just internal identifiers for the courses.
+2025-09-05 09:49:13,251 - __main__ - INFO - User Question: list all instructors  works in ELECtrical Engineering?
+2025-09-05 09:49:13,252 - __main__ - INFO - Response: The Electrical Engineering department has three instructors:
+
+* Dr. Negasi (ID: E-03)
+* Dr. Amanuel (ID: E-02)
+* Dr. Sulatan (ID: E-01)
+2025-09-05 09:49:48,988 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: HAS_MAJOR)} {position: line: 1, column: 21, offset: 20} for query: 'MATCH (s:Student)-[:HAS_MAJOR]->(m:Major {name: "Electrical Engineering"}) RETURN s'
+2025-09-05 09:49:48,988 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Major)} {position: line: 1, column: 36, offset: 35} for query: 'MATCH (s:Student)-[:HAS_MAJOR]->(m:Major {name: "Electrical Engineering"}) RETURN s'
+2025-09-05 09:49:50,628 - __main__ - INFO - User Question: list all students whos major Electrical Engineering?
+2025-09-05 09:49:50,629 - __main__ - INFO - Response: There are no students listed in the database with Electrical Engineering as their major.  This could be due to a few reasons:
+
+* **No students with that major exist in the database:**  It's possible that no one has declared Electrical Engineering as their major yet, or that the information hasn't been added to the system.
+* **Incorrect spelling or capitalization:** Double-check that "Electrical Engineering" is entered exactly as it's stored in the database (including capitalization).  A slight difference could prevent a match.
+* **Data entry error:** There might be a mistake in how the major information was entered for students.
+
+If you're certain students with this major should be in the database, please check the data source for accuracy.
+2025-09-05 09:52:31,174 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: Major)} {position: line: 1, column: 21, offset: 20} for query: 'MATCH (s:Student)-[:Major]->(m:Major {name: "Electrical Engineering"}) RETURN s'
+2025-09-05 09:52:31,174 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Major)} {position: line: 1, column: 32, offset: 31} for query: 'MATCH (s:Student)-[:Major]->(m:Major {name: "Electrical Engineering"}) RETURN s'
+2025-09-05 09:52:33,341 - __main__ - INFO - User Question: list students who are Major in Electrical Engineering?
+2025-09-05 09:52:33,342 - __main__ - INFO - Response: There are no students listed in the database as majoring in Electrical Engineering.  This could be due to a few reasons:
+
+* **No students with that major exist in the database:**  It's possible that no one has yet declared this major, or that the data hasn't been updated to reflect current student information.
+* **Incorrect data entry:** There might be a typo in the "Electrical Engineering" major name within the database, or the student records might have incorrect major information.
+* **Data is incomplete:** The database may only contain a subset of student information, and the records for Electrical Engineering students are missing.
+* **The query itself might be incorrect:** While unlikely, it's possible there's a problem with how the query was structured, preventing it from finding the correct data.
+
+
+To help me find the correct information, could you please clarify if there is a possibility of typos in the major name, or provide any other details about the students you are looking for?
+2025-09-05 09:53:07,128 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Major)} {position: line: 1, column: 35, offset: 34} for query: 'MATCH (s:Student)-[:MAJOR_IN]->(m:Major {name: "Chemical Engineering"}) RETURN s'
+2025-09-05 09:53:07,426 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 52
+}
+].
+2025-09-05 09:53:09,793 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+].
+2025-09-05 09:53:14,094 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+].
+2025-09-05 09:59:26,147 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:59:26,358 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:59:26,405 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:59:27,831 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:59:35,432 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+].
+2025-09-05 09:59:37,889 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 22
+}
+].
+2025-09-05 09:59:42,296 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 17
+}
+].
+2025-09-05 09:59:50,690 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+].
+2025-09-05 10:00:11,518 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 10:00:11,520 - __main__ - INFO - Response: AASTU has at least three departments:
+
+* Electrical Engineering
+* Mechanical Engineering
+* Chemical Engineering
+
+Note: This list may not be exhaustive.  The query results only show the departments explicitly included in the database.  There may be other departments in AASTU that haven't been added to the graph database yet.
+2025-09-05 10:18:04,644 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 10:18:04,829 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 10:18:04,874 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 10:18:06,164 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 10:18:55,736 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: BELONGS_TO)} {position: line: 1, column: 21, offset: 20} for query: 'MATCH (s:Student)-[:BELONGS_TO]->(d:Department) RETURN s.name, d.name'
+2025-09-05 10:18:58,384 - __main__ - INFO - User Question: list all students with their depart ment?
+2025-09-05 10:18:58,385 - __main__ - INFO - Response: It seems there's no information about students and their departments in the database.  This could be due to a few reasons:
+
+* **No data has been entered yet:** The database might be newly created, or the relevant student and department information hasn't been added.
+* **Incorrect data model:** The way the data is structured in the database might not match your expectations.  Perhaps the relationships between students and departments aren't correctly defined.
+* **Typographical error:**  There might be a mistake in your query (though I'm assuming the query is correct given it's provided).
+* **Data filtering:**  Your query might have unintentionally filtered out all results using conditions.
+
+
+
+To fix this, we need to check the database for data entry errors and confirm the data model accurately represents the relationships between students and departments.
+2025-09-05 10:42:36,822 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 10:42:37,093 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 10:42:37,197 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 10:42:37,921 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 10:43:00,936 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 10:43:00,938 - __main__ - INFO - Response: AASTU has several departments, including:
+
+* Electrical Engineering
+* Mechanical Engineering
+* Chemical Engineering
+2025-09-05 10:43:37,377 - __main__ - INFO - User Question: list all instructors works in Electrical Engineering
+2025-09-05 10:43:37,378 - __main__ - INFO - Response: The Electrical Engineering department has three instructors:
+
+* Dr. Negasi (ID: E-03)
+* Dr. Amanuel (ID: E-02)
+* Dr. Sulatan (ID: E-01)
+2025-09-05 10:47:34,741 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: HAS)} {position: line: 1, column: 24, offset: 23} for query: 'MATCH (d:Department)-[:HAS]->(u:University {name: "AASTu"}) RETURN d'
+2025-09-05 10:47:36,972 - __main__ - INFO - User Question: what departments has AASTu?
+2025-09-05 10:47:36,973 - __main__ - INFO - Response: It seems there's no information about departments associated with AASTu in our database.  This could be due to a few reasons:
+
+* **AASTu isn't in the database:**  The name might be misspelled, or the information about AASTu may not have been added yet.
+* **No department information exists:**  It's possible that AASTu doesn't have departments listed in the way our data is structured.
+* **Data is incomplete:**  The database might be missing department information for AASTu, even if it exists in other records.
+
+To help me find the answer, could you double-check the spelling of "AASTu" and provide more context about what kind of organization it is?  This would help me refine my search.

@@ -16,6 +16,6 @@ Examples:
 user question: what are the movies where Tom Hanks acted in?
 Query: MATCH (p:Person {{name: "Tom Hanks"}})-[:ACTED_IN]->(m:Movie) RETURN m.title AS movie
 Results: [{{"movie": "Forrest Gump"}}, {{"movie": "Saving Private Ryan"}}]
-Response: Tom Hanks has acted in several movies including Forrest Gump and Saving Private Ryan. These are just two examples from his extensive filmography.
+Response: Tom Hanks has acted in several movies including Forrest Gump and Saving Private Ryan. 
 
 Current Context:
