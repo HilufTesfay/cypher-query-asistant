@@ -2,3 +2,305 @@
 2025-09-05 06:43:49,159 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
 2025-09-05 06:43:49,206 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
 2025-09-05 06:43:53,328 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 08:43:07,125 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 08:43:07,276 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 08:43:07,303 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 08:43:09,126 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 08:43:37,066 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: STUDIES_AT)} {position: line: 1, column: 21, offset: 20} for query: 'MATCH (s:Student)-[:STUDIES_AT]->(u:University {name: "aastu"}) RETURN count(s)'
+2025-09-05 08:43:40,051 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 08:45:05,456 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 08:46:24,399 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 08:46:24,528 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 08:46:24,555 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 08:46:29,010 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 08:47:16,120 - __main__ - INFO - User Question: What movies has Alice acted in?
+2025-09-05 08:47:16,121 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 08:49:59,912 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 08:50:00,049 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 08:50:00,087 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 08:51:03,923 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 08:51:03,924 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 08:54:57,029 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 08:54:57,162 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 08:54:57,191 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 08:54:58,653 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 08:55:28,865 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 08:55:28,866 - __main__ - INFO - Response: {'question': 'What are the departments in AASTU?', 'query_response': {'query': 'What are the departments in AASTU?', 'result': [{'d.name': 'Electrical Engineering'}, {'d.name': 'Mechanical Engineering'}, {'d.name': 'Chemical Engineering'}]}}
+2025-09-05 08:55:28,866 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 08:58:16,146 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 08:58:16,288 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 08:58:16,310 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 08:59:08,204 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 08:59:08,204 - __main__ - INFO - Response: {'question': 'What are the departments in AASTU?', 'query_response': {'query': 'What are the departments in AASTU?', 'result': [{'d.name': 'Electrical Engineering'}, {'d.name': 'Mechanical Engineering'}, {'d.name': 'Chemical Engineering'}]}, 'final_answer': 'AASTU has several departments, including Electrical Engineering, Mechanical Engineering, and Chemical Engineering.  This list may not be exhaustive; there could be other departments not included in the database.'}
+2025-09-05 08:59:47,728 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+].
+2025-09-05 08:59:49,971 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 10
+}
+].
+2025-09-05 08:59:54,223 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 5
+}
+].
+2025-09-05 09:00:02,575 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+].
+2025-09-05 09:00:18,902 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 32.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+].
+2025-09-05 09:00:51,347 - src.rag - ERROR - Error in process_user_query: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2025-09-05 09:00:51,350 - src.rag - ERROR - Error in explain_result: 'query_response'
+2025-09-05 09:00:51,351 - __main__ - INFO - User Question: list all instractors in the electrical department?
+2025-09-05 09:00:51,351 - __main__ - INFO - Response: {'question': 'list all instractors in the electrical department?'}
+2025-09-05 09:00:51,352 - __main__ - ERROR - Error in chat_ui: 'final_answer'
+2025-09-05 09:02:33,926 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:02:34,117 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:02:34,141 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:02:35,457 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-09-05 09:02:47,861 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+].
+2025-09-05 09:02:50,181 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 9
+}
+].
+2025-09-05 09:02:54,469 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 5
+}
+].
+2025-09-05 09:03:02,748 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+].
+2025-09-05 09:03:19,079 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 32.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+].
+2025-09-05 09:09:16,021 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:09:16,215 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:09:16,241 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:11:45,552 - __main__ - INFO - User Question: What are the departments in AASTU?
+2025-09-05 09:11:45,552 - __main__ - INFO - Response: {'question': 'What are the departments in AASTU?', 'query_response': {'query': 'What are the departments in AASTU?', 'result': [{'d.name': 'Electrical Engineering'}, {'d.name': 'Mechanical Engineering'}, {'d.name': 'Chemical Engineering'}]}, 'final_answer': 'AASTU has several departments, including Electrical Engineering, Mechanical Engineering, and Chemical Engineering.  This list may not be exhaustive; there could be other departments not included in the database.'}
+2025-09-05 09:12:12,648 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: BELONGS_TO)} {position: line: 1, column: 47, offset: 46} for query: 'MATCH (i:Instructor)-[:TEACHES]->(c:Course)-[:BELONGS_TO]->(d:Department {name: "Electrical Engineering"}) RETURN i'
+2025-09-05 09:12:14,294 - __main__ - INFO - User Question: list all instractors in electrical engineering department
+2025-09-05 09:12:14,294 - __main__ - INFO - Response: {'question': 'list all instractors in electrical engineering department', 'query_response': {'query': 'list all instractors in electrical engineering department', 'result': []}, 'final_answer': 'There are no instructors listed in our database for the Electrical Engineering department.  This could be due to a few reasons:\n\n* **Missing Data:**  The database may not yet contain information on instructors in that department.  It\'s possible the data hasn\'t been added yet.\n* **Incorrect Department Name:**  Double-check that "Electrical Engineering" is the exact name used in the database.  There might be a slight variation (e.g., "Electrical & Computer Engineering").\n* **Data Entry Error:** There might be an error in how the instructor and department information is linked in the database.\n\nTo help me find the information, could you please confirm the exact name of the department as it appears in any official records?'}
+2025-09-05 09:12:47,503 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: OFFERS)} {position: line: 1, column: 48, offset: 47} for query: 'MATCH (i:Instructor)-[:TEACHES]->(c:Course)<-[:OFFERS]-(d:Department {name: "Electrical Engineering"}) RETURN i'
+2025-09-05 09:12:49,141 - __main__ - INFO - User Question: list all instrctors in Electrical Engineering
+2025-09-05 09:12:49,142 - __main__ - INFO - Response: {'question': 'list all instrctors in Electrical Engineering', 'query_response': {'query': 'list all instrctors in Electrical Engineering', 'result': []}, 'final_answer': "There are no instructors listed in our database for Electrical Engineering.  This could be due to a few reasons:\n\n* **Missing Data:**  We may not have yet added instructor information for Electrical Engineering to our database.\n* **Incorrect Department Name:**  The query might be using an incorrect name for the Electrical Engineering department.  Perhaps there's a slightly different name used internally.\n* **No Instructors Assigned:** It's possible that no instructors are currently assigned to Electrical Engineering courses.\n\n\nTo help me find the information you need, could you please double-check the department name or provide any additional details, such as a specific course name or instructor's name you might know?"}
+2025-09-05 09:14:35,337 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided relationship type is not in the database.} {description: One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: OFFERS)} {position: line: 1, column: 48, offset: 47} for query: 'MATCH (i:Instructor)-[:TEACHES]->(c:Course)<-[:OFFERS]-(d:Department {name: "Electrical Engineering"}) RETURN i'
+2025-09-05 09:14:37,173 - __main__ - INFO - User Question: list all instructor in Electrical Engineering
+2025-09-05 09:14:37,174 - __main__ - INFO - Response: {'question': 'list all instructor in Electrical Engineering', 'query_response': {'query': 'list all instructor in Electrical Engineering', 'result': []}, 'final_answer': 'There are no instructors listed in our database for Electrical Engineering.  This could be due to a few reasons:\n\n* **Missing data:**  The database may not yet contain information on Electrical Engineering instructors.\n* **Incorrect categorization:**  Instructors might be listed under a different department or label.  Perhaps "Electrical and Computer Engineering" or a similar, more encompassing term is used.\n* **Data entry error:**  The information on Electrical Engineering instructors might simply not have been entered into the database correctly.\n\n\nTo help me find the information you need, could you please clarify the department name or provide any other details, such as a specific course or program?'}
+2025-09-05 09:15:11,020 - __main__ - INFO - User Question: list all instructors?
+2025-09-05 09:15:11,021 - __main__ - INFO - Response: {'question': 'list all instructors?', 'query_response': {'query': 'list all instructors?', 'result': [{'i': {'name': 'Dr. sulatan', 'id': ' E-01'}}, {'i': {'name': 'Dr. amanuel', 'id': 'E-02'}}, {'i': {'name': 'Dr. negasi', 'id': 'E- 03'}}, {'i': {'name': 'Dr.meresa', 'id': 'CH-01'}}, {'i': {'name': 'Dr. melaku', 'id': 'CH-02'}}, {'i': {'name': 'Dr. bruk', 'id': 'CH- 03'}}, {'i': {'name': 'Dr.Fana', 'id': 'M-01'}}, {'i': {'name': 'Dr. melaku', 'id': 'M-02'}}, {'i': {'name': 'Dr. bruk', 'id': 'M- 03'}}]}, 'final_answer': 'We have a list of instructors in our database:\n\n* Dr. Sultan (ID: E-01)\n* Dr. Amanuel (ID: E-02)\n* Dr. Negasi (ID: E-03)\n* Dr. Meresa (ID: CH-01)\n* Dr. Melaku (ID: CH-02)\n* Dr. Bruk (ID: CH-03)\n* Dr. Fana (ID: M-01)\n* Dr. Melaku (ID: M-02)\n* Dr. Bruk (ID: M-03)\n\nNote that some instructors, like Dr. Melaku and Dr. Bruk, appear to have multiple IDs, possibly indicating they teach in different departments or have different roles.  The IDs might be codes representing different departments or subject areas.'}
+2025-09-05 09:15:45,836 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: department)} {position: line: 1, column: 45, offset: 44} for query: 'MATCH (i:Instructor)-[:TEACHES]->(c:Course {department: "Chemical Engineering"}) RETURN i'
+2025-09-05 09:15:47,830 - __main__ - INFO - User Question: list all instractors in Chemical Engineering
+2025-09-05 09:15:47,830 - __main__ - INFO - Response: {'question': 'list all instractors in Chemical Engineering', 'query_response': {'query': 'list all instractors in Chemical Engineering', 'result': []}, 'final_answer': 'There are no instructors listed in our database for Chemical Engineering.  This could be due to a few reasons:\n\n* **Missing Data:**  We may not have added all instructors to the database yet.\n* **Incorrect Department Name:**  Perhaps the department name "Chemical Engineering" is slightly different in our system (e.g., "ChemE," "Chemical & Biomolecular Engineering").  Could you double-check the exact name used in the department\'s official records?\n* **Data Entry Error:** There might be an error in how the instructor and department data is linked in the database.\n\nTo help me find the information, please provide the correct department name if you know it, or any other details that might help identify Chemical Engineering instructors.'}
+2025-09-05 09:16:41,793 - __main__ - INFO - User Question: what course teaches dr sultan?
+2025-09-05 09:16:41,794 - __main__ - INFO - Response: {'question': 'what course teaches dr sultan?', 'query_response': {'query': 'what course teaches dr sultan?', 'result': []}, 'final_answer': 'It seems there\'s no information in our database about what courses Dr. Sultan teaches.  This could be for a few reasons:\n\n* **Dr. Sultan\'s data is missing:**  We might not have added his information to the database yet.\n* **Incorrect spelling or name variation:**  The database may be using a slightly different spelling of his name or a different title (e.g., "Professor Sultan").\n* **Data not included:** The database may only include information on certain types of courses or instructors.  It\'s possible that the type of course Dr. Sultan teaches isn\'t recorded.\n\nTo help me find the answer, could you please double-check the spelling of Dr. Sultan\'s name and provide any additional details you might have, such as his department or the university he works at?'}
+2025-09-05 09:17:50,194 - __main__ - INFO - User Question: list all instructors with thier respective department?
+2025-09-05 09:17:50,195 - __main__ - INFO - Response: {'question': 'list all instructors with thier respective department?', 'query_response': {'query': 'list all instructors with thier respective department?', 'result': [{'i.name': 'Dr. negasi', 'd.name': 'Electrical Engineering'}, {'i.name': 'Dr. amanuel', 'd.name': 'Electrical Engineering'}, {'i.name': 'Dr. sulatan', 'd.name': 'Electrical Engineering'}, {'i.name': 'Dr. bruk', 'd.name': 'Mechanical Engineering'}, {'i.name': 'Dr. melaku', 'd.name': 'Mechanical Engineering'}, {'i.name': 'Dr.Fana', 'd.name': 'Mechanical Engineering'}, {'i.name': 'Dr. bruk', 'd.name': 'Chemical Engineering'}, {'i.name': 'Dr. melaku', 'd.name': 'Chemical Engineering'}, {'i.name': 'Dr.meresa', 'd.name': 'Chemical Engineering'}]}, 'final_answer': "Here's a list of instructors and their departments:\n\n* **Electrical Engineering:** Dr. Negasi, Dr. Amanuel, Dr. Sultan\n* **Mechanical Engineering:** Dr. Bruk, Dr. Melaku, Dr. Fana\n* **Chemical Engineering:** Dr. Bruk, Dr. Melaku, Dr. Meresa\n\nNotice that some instructors, like Dr. Bruk and Dr. Melaku, teach in multiple departments."}
+2025-09-05 09:18:30,493 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Professor)} {position: line: 1, column: 37, offset: 36} for query: 'MATCH (d:Department)-[:TEACHES]->(p:Professor {name: "Dr. Sultan"}) RETURN d'
+2025-09-05 09:18:32,896 - __main__ - INFO - User Question: what depart ment teachs Dr. Sultan?
+2025-09-05 09:18:32,897 - __main__ - INFO - Response: {'question': 'what depart ment teachs Dr. Sultan?', 'query_response': {'query': 'what depart ment teachs Dr. Sultan?', 'result': []}, 'final_answer': 'There are no results showing which department teaches Dr. Sultan.  This could be due to a few reasons:\n\n* **Dr. Sultan\'s data is missing:**  The database may not yet contain information about Dr. Sultan\'s affiliation with any department.\n* **Incorrect spelling or name variation:** The query might be using an incorrect spelling of Dr. Sultan\'s name.  Try different spellings or variations if you\'re unsure of the exact entry.\n* **Data structure issue:** The way the "teaches" relationship is structured in the database might be different than what the query assumes.  There might be a different relationship type or property that needs to be used.\n* **Dr. Sultan doesn\'t teach:**  Dr. Sultan might have a role in the department but not directly teach courses.\n\n\nTo help me find the correct information, could you please provide more details, such as Dr. Sultan\'s full name, or perhaps the name of the institution you\'re querying?'}
+2025-09-05 09:19:37,978 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownLabelWarning} {category: UNRECOGNIZED} {title: The provided label is not in the database.} {description: One of the labels in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing label name is: Professor)} {position: line: 1, column: 10, offset: 9} for query: 'MATCH (p:Professor)-[:WORKS_IN]->(d:Department {name: "Electrical Engineering"}) RETURN p'
+2025-09-05 09:19:39,772 - __main__ - INFO - User Question: list all proffessors in  ELectrical Engineering?
+2025-09-05 09:19:39,773 - __main__ - INFO - Response: {'question': 'list all proffessors in  ELectrical Engineering?', 'query_response': {'query': 'list all proffessors in  ELectrical Engineering?', 'result': []}, 'final_answer': 'I couldn\'t find any professors listed in the Electrical Engineering department based on the information I have access to.  There are several reasons why this might be:\n\n* **No data exists:**  The database may not yet contain information on Electrical Engineering professors.\n* **Incorrect data entry:** The professors\' profiles might not have been correctly tagged with "Electrical Engineering" as their department.\n* **Data limitations:** The database may only include certain types of professors or only professors from specific departments.\n\n\nTo help me find the information you\'re looking for, could you please clarify:\n\n* Is this database up-to-date?\n* Are there any other ways to identify Electrical Engineering professors (e.g., by using a different department name or a broader search term)?'}
+2025-09-05 09:21:04,166 - __main__ - INFO - Starting RAG Query Assistant
+2025-09-05 09:21:04,307 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-09-05 09:21:04,333 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-09-05 09:21:05,679 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"

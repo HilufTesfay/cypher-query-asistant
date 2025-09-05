@@ -11,6 +11,8 @@ def chat_ui(user_question:str,history:list)->str:
     """chat interface for user to ask questions and get answers."""
     try:
         response = agent.invoke({"question": user_question})
+        logger.info(f"User Question: {user_question}")
+        logger.info(f"Response: {response['final_answer']}")
         return response["final_answer"]
     except Exception as e:
         logger.error(f"Error in chat_ui: {e}")
@@ -20,7 +22,7 @@ app=gr.ChatInterface(
     fn=chat_ui,
     title="RAG Query Assistant",
     description="Ask questions and get answers based on the provided graph data base schem context.",
-    examples=["What movies has Alice acted in?", "What is the capital of France?"],
+    examples=["What are the departments in AASTU?", "What courses are offered in Electrical Engineering?"],
     theme="soft")
 
 
