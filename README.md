@@ -11,19 +11,21 @@ Users can ask questions in plain English, and the assistant translates them into
 ```bash
 git clone https://github.com/your-username/cypher-query-assistant.git
 cd cypher-query-assistant
-
-### Add Some Sample Data to Neo4j
-
-
-### 2.  
+```
+### 2. copy .env.example to .env
+```bash
 cp .env.example .env
-
+```
 ## 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-### 4. run 
-python -m app.main
+```
 
-### open 
+### 4. run 
+```bash
+python -m app.main
+```
+### open this in the browser
 http://127.0.0.1:7860/
 
 
