@@ -29,8 +29,3 @@ cypher_query = GraphCypherQAChain.from_llm(
     verbose=True,
 )
 
-def execute_cypher_query(query: str) -> dict:
-    """Executes a Cypher query against the Neo4j database."""
-    result = graph_db.query(query)
-    graph_db.close()
-    return result

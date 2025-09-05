@@ -3,7 +3,7 @@ import logging
 
 
 def get_project_root() -> path.Path:
-    return path.Path(__file__).parent.parent
+    return path.Path(__file__).parent.parent.parent
 
 root_dir = get_project_root()
 log_dir = root_dir / "logs"
